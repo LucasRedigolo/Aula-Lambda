@@ -1,0 +1,10 @@
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\bin\Debug\netcoreapp2.0\ExemplosLambda.deps.json
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\bin\Debug\netcoreapp2.0\ExemplosLambda.runtimeconfig.json
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\bin\Debug\netcoreapp2.0\ExemplosLambda.runtimeconfig.dev.json
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\bin\Debug\netcoreapp2.0\ExemplosLambda.dll
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\bin\Debug\netcoreapp2.0\ExemplosLambda.pdb
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\obj\Debug\netcoreapp2.0\ExemplosLambda.csproj.CoreCompileInputs.cache
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\obj\Debug\netcoreapp2.0\ExemplosLambda.AssemblyInfoInputs.cache
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\obj\Debug\netcoreapp2.0\ExemplosLambda.AssemblyInfo.cs
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\obj\Debug\netcoreapp2.0\ExemplosLambda.dll
+c:\Users\43692939876\Desktop\Projetos\Aula-Lambda\ExemplosLambda\obj\Debug\netcoreapp2.0\ExemplosLambda.pdb
