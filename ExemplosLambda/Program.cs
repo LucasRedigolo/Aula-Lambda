@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ExemplosLambda {
     class Program {
@@ -49,8 +51,53 @@ namespace ExemplosLambda {
             //     if (res (i))
             //         System.Console.WriteLine (i);
 
-            Func<double, double, double> calculo = (x, y) => x/y;
-            System.Console.WriteLine(calculo(6.0,2.0));
+            // Func<double, double, double> calculo = (x, y) => x/y;
+            // System.Console.WriteLine(calculo(6.0,2.0));
+
+            // List<string> cidades = new List<string> ();
+
+            // cidades.Add ("Campinas");
+            // cidades.Add ("Rio");
+            // cidades.Add ("Salvador");
+            // cidades.Add ("Vitoria");
+            // cidades.Add ("Natal");
+
+            // var cid = cidades.Where(x=>x.Length<=5); // Linq usado para pesquisar dentro da lista
+            // foreach (string i in cid)
+            //     System.Console.WriteLine (i.ToUpper());
+
+            // List<Alunos> aluno = new List<Alunos> () {
+            //     new Alunos { Id = 32, Nome = "Lucas", Email = "lucas@lindo", Idade = 21 },
+            //     new Alunos { Id = 597, Nome = "Jaime", Email = "Jaime@sirilo", Idade = 42 },
+            //     new Alunos { Id = 217, Nome = "Pablo", Email = "Pablo@lindo", Idade = 30 },
+            //     new Alunos { Id = 471, Nome = "Ana", Email = "ana@banana", Idade = 15 }
+            // };
+            // // var res = from x in aluno where x.Idade > 20 && x.Idade < 50 select x;
+            // // foreach (Alunos al in res)
+            // // System.Console.WriteLine(al.Id + " - " + al.Nome + " - " + al.Idade + " - " + al.Email);
+
+            // var res = aluno.Count(x=> x.Email.Contains("lindo")); // Count serve para contar quantos itens cumprem determinada logica
+            // System.Console.WriteLine(res);
+
+            List<Produto> prod = new List<Produto> () {
+                new Produto { IdProduto = 1, NomeProduto = "Lapis", Preco = 2, IdFornecedor = 30 },
+                new Produto { IdProduto = 2, NomeProduto = "Borracha", Preco = 3, IdFornecedor = 41 },
+                new Produto { IdProduto = 3, NomeProduto = "Caneta", Preco = 4, IdFornecedor = 30 },
+                new Produto { IdProduto = 4, NomeProduto = "Caderno", Preco = 15, IdFornecedor = 41 }
+            };
+            List<Fornecedor> forne = new List<Fornecedor> {
+                new Fornecedor { IdFornecedor = 30, RazaoSocial = "Faber Castel", Telefone = "11" },
+                new Fornecedor { IdFornecedor = 41, RazaoSocial = "Bic", Telefone = "21" },
+                new Fornecedor { IdFornecedor = 51, RazaoSocial = "Chameco", Telefone = "45" }
+            };
+            var resultado = prod.Join ( // usado para mesclar duas listas distintas
+                forne,
+                p => p.IdFornecedor, // o primeiro item se refere a qual lista que chamou o metodo Join
+                f => f.IdFornecedor,
+                (p, f) => new { pNome = p.NomeProduto, fRazao = f.RazaoSocial });
+
+                foreach (var x in resultado)
+                System.Console.WriteLine(x.pNome + " -- " + x.fRazao);
         }
     }
 }
